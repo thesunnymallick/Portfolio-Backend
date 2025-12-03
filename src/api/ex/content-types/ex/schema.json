@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exes",
+  "info": {
+    "singularName": "ex",
+    "pluralName": "exes",
+    "displayName": "Experiences"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "company": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "skills": {
+      "type": "json"
+    }
+  }
+}

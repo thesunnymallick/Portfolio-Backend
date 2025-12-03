@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Projects"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "projectName": {
+      "type": "string"
+    },
+    "Date": {
+      "type": "string"
+    },
+    "techStack": {
+      "type": "json"
+    },
+    "projectThumbnail": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "githubLink": {
+      "type": "string"
+    },
+    "LiveLink": {
+      "type": "string"
+    }
+  }
+}

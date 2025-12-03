@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "skills",
+  "info": {
+    "singularName": "skill",
+    "pluralName": "skills",
+    "displayName": "Skills"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Skills": {
+      "type": "component",
+      "component": "skils.tech-skills",
+      "repeatable": true
+    }
+  }
+}
