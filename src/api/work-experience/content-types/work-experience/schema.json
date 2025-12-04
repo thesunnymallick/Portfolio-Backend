@@ -1,17 +1,17 @@
 {
   "kind": "collectionType",
-  "collectionName": "exes",
+  "collectionName": "work_experiences",
   "info": {
-    "singularName": "ex",
-    "pluralName": "exes",
-    "displayName": "experiences"
+    "singularName": "work-experience",
+    "pluralName": "work-experiences",
+    "displayName": "work-experience"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "company": {
+    "companyName": {
       "type": "string"
     },
     "role": {

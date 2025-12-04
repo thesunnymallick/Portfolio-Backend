@@ -11,9 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
-      "type": "string"
-    },
     "Role": {
       "type": "string"
     },
@@ -26,6 +23,9 @@
         "videos",
         "audios"
       ]
+    },
+    "name": {
+      "type": "string"
     },
     "description": {
       "type": "blocks"

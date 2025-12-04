@@ -503,7 +503,7 @@ export interface ApiAboutSectionAboutSection extends Struct.SingleTypeSchema {
 export interface ApiExEx extends Struct.CollectionTypeSchema {
   collectionName: 'exes';
   info: {
-    displayName: 'Experiences';
+    displayName: 'experiences';
     pluralName: 'exes';
     singularName: 'ex';
   };
@@ -685,6 +685,40 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
     >;
     publishedAt: Schema.Attribute.DateTime;
     Role: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiWorkExperienceWorkExperience
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'work_experiences';
+  info: {
+    displayName: 'work-experience';
+    pluralName: 'work-experiences';
+    singularName: 'work-experience';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    companyName: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.String;
+    description: Schema.Attribute.Blocks;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::work-experience.work-experience'
+    > &
+      Schema.Attribute.Private;
+    location: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    role: Schema.Attribute.String;
+    skills: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1209,6 +1243,7 @@ declare module '@strapi/strapi' {
       'api::project.project': ApiProjectProject;
       'api::skill.skill': ApiSkillSkill;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
+      'api::work-experience.work-experience': ApiWorkExperienceWorkExperience;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
