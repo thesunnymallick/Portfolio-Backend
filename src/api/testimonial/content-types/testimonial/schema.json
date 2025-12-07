@@ -14,7 +14,7 @@
     "Role": {
       "type": "string"
     },
-    "ProfileImage": {
+    "avatar": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -27,11 +27,11 @@
     "name": {
       "type": "string"
     },
-    "description": {
-      "type": "blocks"
-    },
     "linkedinUrl": {
       "type": "string"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }
